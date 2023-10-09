@@ -1,0 +1,11 @@
+@mixin heading($_weight, $_size, $_height, $_spacing, $_padding) {
+  font-weight: $_weight;
+  font-size: $_size;
+  line-height: $_height;
+  letter-spacing: $_spacing;
+  padding-top: $_padding;
+
+  &:first-child {
+    padding-top: unset;
+  }
+}
