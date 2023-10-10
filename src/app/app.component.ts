@@ -20,4 +20,8 @@ export class AppComponent {
   onKeyUp(title: string) {
     this.data.title = title;
   }
+
+  onClicked(index: number) {
+    console.log('app received index:', index);
+  }
 }

@@ -1,4 +1,5 @@
-<article class="app-cards" *ngFor="let card of data">
+<article class="app-cards" *ngFor="let card of data; let index = index">
   <h3>{{card.title}}</h3>
   <p>{{card.description}}</p>
+  <button (click)="onClick(index)">Output Call</button>
 </article>

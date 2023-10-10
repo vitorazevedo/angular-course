@@ -1,5 +1,5 @@
 <section class="app">
   <h1>Welcome to {{data.title}}!</h1>
   <input type="text" (keyup)="onKeyUp(input.value)" [value]="data.title" #input>
-  <app-cards [data]="cards"></app-cards>
+  <app-cards *ngIf="cards.length" [data]="cards" (onClicked)="onClicked($event)"></app-cards>
 </section>

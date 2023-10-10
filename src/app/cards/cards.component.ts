@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { cards } from './cads.interfaces';
 
@@ -14,4 +14,10 @@ export class CardsComponent {
 
   @Input({ required: true }) data: cards[] = [];
 
+  @Output('onClicked') clicked = new EventEmitter<number>();
+
+  onClick(index: number) {
+    console.log('card emitted index:', index);
+    this.clicked.emit(index);
+  }
 }
