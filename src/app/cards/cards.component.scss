@@ -1,0 +1,17 @@
+@import "variables";
+
+.app-cards {
+  display: flex;
+  flex-direction: column;
+  gap: $size-px-10;
+
+  padding: $size-px-20;
+  background-color: $color-white;
+  border: $size-px-1 solid $color-black;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $size-px-10;
+}
