@@ -9,7 +9,7 @@ import { cards } from './cards/cads.interfaces';
 })
 export class AppComponent {
   data = {
-    title: 'CodeSandbox'
+    title: 'Angular'
   };
 
   cards: cards[] = [
@@ -23,5 +23,9 @@ export class AppComponent {
 
   onClicked(index: number) {
     console.log('app received index:', index);
+  }
+
+  getFullYear(): number {
+    return new Date().getFullYear();
   }
 }
