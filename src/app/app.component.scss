@@ -1,12 +1,13 @@
 @import "variables";
 
 header {
+  flex: content;
   padding: $size-px-20;
   border-bottom: $size-px-1 solid $color-black;
 }
 
 main {
-  height: 100%;
+  flex: 3 1 100%;
   padding: $size-px-20;
   display: flex;
   gap: $size-px-20;
@@ -25,6 +26,7 @@ main {
 }
 
 footer {
+  flex: content;
   padding: $size-px-20;
   border-top: $size-px-1 solid $color-black;
 }
