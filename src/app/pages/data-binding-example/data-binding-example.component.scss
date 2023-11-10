@@ -1,0 +1,40 @@
+@import "variables";
+
+.app-data-binding-example {
+  .playground {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-14;
+
+    small {
+      padding: $size-px-5 $size-px-10 $size-px-5 $size-px-10;
+      font-size: $font-size-11;
+      background-color: $color-neutral-9-light;
+      border-top-left-radius: $size-px-5;
+      border-top-right-radius: $size-px-5;
+    }
+
+    &>div {
+      padding: $size-px-20;
+      background-color: $color-neutral-10-light;
+
+      p {
+        padding-top: $size-px-10;
+      }
+
+      input {
+        width: $size-pe-100;
+        margin-top: $size-px-10;
+        padding: $size-px-10;
+        color: $color-white;
+        border: $size-px-1 solid $color-white;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+:host {
+  display: flex;
+  justify-content: center;
+}

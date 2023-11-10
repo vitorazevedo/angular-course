@@ -1,0 +1,71 @@
+<article class="app-data-binding-example">
+  <h1>Dynamic Title Update in Angular: A Guide to Real-Time Data Binding</h1>
+  <section>
+    <h2>Introduction</h2>
+    <p>Angular, a powerful JavaScript framework, offers extensive features for creating dynamic and responsive web
+      applications. One of the core functionalities of Angular is its real-time data binding capability, which allows
+      for immediate synchronization between the model and the view. In this article, we explore this concept through a
+      practical example: dynamically updating a page title based on user input.</p>
+  </section>
+  <section class="playground">
+    <small>playground</small>
+    <div>
+      <h3>{{data.title}}</h3>
+      <p>Use the following input to change the title of this playground:</p>
+      <input type="text" name="title" (keyup)="onKeyUp(input.value)" [value]="data.title" #input>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <h2>HTML Structure</h2>
+    <p>We start with an HTML template within an Angular component:</p>
+    <app-code-preview [language]="data.preview.html.language" [code]="data.preview.html.code"></app-code-preview>
+    <p>This structure comprises:</p>
+    <ol>
+      <li><strong>Section Element</strong>: A <code>&lt;section&gt;</code> tag with a class <code>playground</code>,
+        serving as a container for the home page content.</li>
+      <li><strong>Binding Title Data</strong>: An <code>&lt;h3&gt;</code> element that displays the <code>title</code>
+        property from a <code>data</code> object, using Angular's interpolation syntax <code>{{data.title}}</code>.</li>
+      <li><strong>User Instructions</strong>: A paragraph explaining the functionality of the subsequent input field.
+      </li>
+      <li><strong>Interactive Input Field</strong>: A text input field configured to: <ul>
+          <li>Detect <code>keyup</code> events, triggering the <code>onKeyUp</code> method with the current input value.
+          </li>
+          <li>Bind its value to the <code>data.title</code> property.</li>
+          <li>Reference itself with a template variable <code>#input</code>.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <h2>TypeScript</h2>
+    <p>The Angular component class contains:</p>
+    <app-code-preview [language]="data.preview.typescript.language"
+      [code]="data.preview.typescript.code"></app-code-preview>
+    <p>This code sets up:</p>
+    <ol>
+      <li><strong>Data Model</strong>: An object <code>data</code> with a <code>title</code> property, initialized to
+        <code>'Home works!'</code>.</li>
+      <li><strong>Event Handler Method</strong>: <code>onKeyUp</code>, updating <code>data.title</code> with the
+        provided input, reflecting user keystrokes.</li>
+    </ol>
+  </section>
+  <section>
+    <h2>How It Works</h2>
+    <ol>
+      <li><strong>Initial Load</strong>: Upon loading, the heading displays "Home works!", the initial value of
+        <code>data.title</code>.</li>
+      <li><strong>User Interaction</strong>: As users type in the input field, <code>onKeyUp</code> is invoked for each
+        keystroke, updating <code>data.title</code>.</li>
+      <li><strong>Real-Time Update</strong>: Angular's data binding updates the <code>&lt;h2&gt;</code> content with
+        every change to <code>data.title</code>, making the title dynamic.</li>
+    </ol>
+  </section>
+  <section>
+    <h2>Conclusion</h2>
+    <p>This example illustrates the elegance and efficiency of Angular in creating interactive, real-time web
+      applications. The use of data binding not only simplifies the code but also enhances the user experience by
+      providing immediate visual feedback. Whether for large-scale applications or small interactive features, Angular's
+      data binding is a powerful tool in the modern web developer's arsenal.</p>
+  </section>
+</article>
