@@ -8,26 +8,26 @@ header {
 
 main {
   flex: 3 1 $size-pe-100;
-  padding: $size-px-20;
   display: flex;
-  gap: $size-px-20;
 
   &>aside {
     flex: 1;
     padding: $size-px-20;
-    border: $size-px-1 solid $color-black;
+    color: $color-white-dark;
+    background-color: $color-neutral-10-light;
 
     nav {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: $size-px-10;
     }
   }
 
   &>section {
     flex: 4;
-    padding: $size-px-20;
-    border: $size-px-1 solid $color-black;
+    padding: $size-px-40 $size-px-40 $size-px-100 $size-px-40;
+    color: $color-white-dark;
+    background-color: $color-neutral-9;
   }
 }
 

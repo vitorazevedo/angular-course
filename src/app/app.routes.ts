@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
 
 import { ComponentsComponent } from './pages/components/components.component';
-import { HomeComponent } from './pages/home/home.component';
+import {
+    DataBindingExampleComponent
+} from './pages/data-binding-example/data-binding-example.component';
 
 export const routes: Routes = [
-  { path: '', title: 'Angular', component: HomeComponent },
+  { path: 'angular-data-binding-example', title: 'Angular - Data Binding Example', component: DataBindingExampleComponent },
   { path: 'components', title: 'Angular', component: ComponentsComponent },
 ];

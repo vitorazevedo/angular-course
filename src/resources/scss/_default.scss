@@ -15,15 +15,62 @@ body {
   }
 }
 
+article {
+  max-width: $size-px-700;
+  display: flex;
+  flex-direction: column;
+  gap: $size-px-40;
+
+  &>section {
+    &>p {
+      padding-top: $size-px-15;
+    }
+
+    &>ol {
+      padding: $size-px-15 0 0 $size-px-20;
+      list-style-type: decimal;
+
+      li:not(:first-child) {
+        padding-top: $size-px-10;
+      }
+
+      li {
+        &>code {
+          color: $color-white;
+          font-size: $font-size-14;
+          font-weight: $font-bold;
+
+          &::before,
+          &::after {
+            content: '`';
+            padding: 0 $size-px-1 0 $size-px-1;
+          }
+        }
+
+        &>ul {
+          padding: $size-px-10 0 0 $size-px-20;
+          list-style-type: disc;
+        }
+      }
+    }
+  }
+}
+
 b,
 strong {
   font-weight: $font-bold;
 }
 
 a {
-  color: $color-black;
+  color: $color-white-dark;
 
   &:hover {
     text-decoration: none;
   }
+}
+
+hr {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
