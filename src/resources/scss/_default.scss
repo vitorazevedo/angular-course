@@ -15,6 +15,23 @@ body {
   }
 }
 
+@mixin nested-code {
+  &>code {
+    padding: 2px 3px;
+    color: $color-white;
+    font-size: $font-size-14;
+    font-weight: $font-bold;
+    border-radius: 5px;
+    background-color: $color-neutral-8;
+
+    &::before,
+    &::after {
+      content: '`';
+      padding: 0 $size-px-1 0 $size-px-1;
+    }
+  }
+}
+
 article {
   max-width: $size-px-700;
   display: flex;
@@ -22,8 +39,13 @@ article {
   gap: $size-px-40;
 
   &>section {
+    &>h3 {
+      padding-top: $size-px-15;
+    }
+
     &>p {
       padding-top: $size-px-15;
+      @include nested-code;
     }
 
     &>a {
@@ -41,17 +63,7 @@ article {
       }
 
       li {
-        &>code {
-          color: $color-white;
-          font-size: $font-size-14;
-          font-weight: $font-bold;
-
-          &::before,
-          &::after {
-            content: '`';
-            padding: 0 $size-px-1 0 $size-px-1;
-          }
-        }
+        @include nested-code;
 
         &>ul {
           padding: $size-px-10 0 0 $size-px-20;
