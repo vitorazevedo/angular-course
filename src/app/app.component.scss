@@ -1,9 +1,20 @@
 @import "variables";
 
 header {
-  flex: content;
   padding: $size-px-20;
-  border-bottom: $size-px-1 solid $color-black;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: content;
+  font-size: $font-size-32;
+  color: $color-white-dark;
+  text-align: right;
+  border-bottom: $size-px-1 solid $color-white-dark;
+  background-color: $color-neutral-9;
+
+  img {
+    width: 60px;
+  }
 }
 
 main {
@@ -12,14 +23,26 @@ main {
 
   &>aside {
     flex: 1;
-    padding: $size-px-20;
     color: $color-white-dark;
+    border-right: $size-px-1 solid $color-white-dark;
     background-color: $color-neutral-10-light;
 
     nav {
+      padding-top: $size-px-40;
       display: flex;
       flex-direction: column;
-      gap: $size-px-10;
+      gap: $size-px-5;
+
+      a {
+        padding: $size-px-10 $size-px-30;
+        display: inline-block;
+        color: $color-white-dark;
+        text-decoration: none;
+
+        &:hover {
+          background-color: rgba($color-info-shade, $opacity-5);
+        }
+      }
     }
   }
 
@@ -34,7 +57,11 @@ main {
 footer {
   flex: content;
   padding: $size-px-20;
-  border-top: $size-px-1 solid $color-black;
+  font-size: $font-size-13;
+  color: $color-white-dark;
+  text-align: right;
+  border-top: $size-px-1 solid $color-white-dark;
+  background-color: $color-neutral-9;
 }
 
 :host {
