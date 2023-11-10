@@ -1,9 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 import { cards } from './cards/cads.interfaces';
+import { CardsComponent } from './cards/cards.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, CardsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
