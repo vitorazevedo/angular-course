@@ -3,16 +3,16 @@ import { CodePreviewComponent } from 'src/app/components/code-preview/code-previ
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { HTML, TYPESCRIPT } from './data-binding-example.contants';
+import { HTML, TYPESCRIPT } from './data-binding-playground.contants';
 
 @Component({
-  selector: 'app-data-binding-example',
+  selector: 'app-data-binding-playground',
   standalone: true,
   imports: [CommonModule, CodePreviewComponent],
-  templateUrl: './data-binding-example.component.html',
-  styleUrl: './data-binding-example.component.scss'
+  templateUrl: './data-binding-playground.component.html',
+  styleUrl: './data-binding-playground.component.scss'
 })
-export class DataBindingExampleComponent {
+export class DataBindingPlaygroundComponent {
   data = {
     title: 'Home works!',
     preview: {

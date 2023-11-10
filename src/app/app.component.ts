@@ -10,7 +10,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   data = {
-    title: 'Welcome to Angular!'
+    title: 'Angular Guide'
   };
 
   getFullYear(): number {

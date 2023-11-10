@@ -2,10 +2,12 @@ import { Routes } from '@angular/router';
 
 import { ComponentsComponent } from './pages/components/components.component';
 import {
-    DataBindingExampleComponent
-} from './pages/data-binding-example/data-binding-example.component';
+    DataBindingPlaygroundComponent
+} from './pages/data-binding-playground/data-binding-playground.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 
 export const routes: Routes = [
-  { path: 'angular-data-binding-example', title: 'Angular - Data Binding Example', component: DataBindingExampleComponent },
-  { path: 'components', title: 'Angular', component: ComponentsComponent },
+  { path: 'angular-data-binding', title: 'Angular - Data Binding', component: DataBindingComponent },
+  { path: 'angular-data-binding-playground', title: 'Angular - Data Binding Playground', component: DataBindingPlaygroundComponent },
+  { path: 'angular-components', title: 'Angular - Components', component: ComponentsComponent },
 ];

@@ -26,7 +26,13 @@ article {
       padding-top: $size-px-15;
     }
 
-    &>ol {
+    &>a {
+      margin-top: $size-px-15;
+      display: inline-block;
+    }
+
+    &>ol,
+    &>ul {
       padding: $size-px-15 0 0 $size-px-20;
       list-style-type: decimal;
 
@@ -52,6 +58,10 @@ article {
           list-style-type: disc;
         }
       }
+    }
+
+    &>ul {
+      list-style-type: disc;
     }
   }
 }
