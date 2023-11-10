@@ -5,13 +5,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-components',
+  selector: 'app-components-playground',
   standalone: true,
   imports: [CommonModule, CardsComponent],
-  templateUrl: './components.component.html',
-  styleUrl: './components.component.scss'
+  templateUrl: './components-playground.component.html',
+  styleUrl: './components-playground.component.scss'
 })
-export class ComponentsComponent {
+export class ComponentsPlaygroundComponent {
   cards: Cards[] = [
     { title: 'Delectus quod magni', description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus provident culpa sapiente earum adipisci quibusdam.' },
     { title: 'Delectus quod magni', description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus provident culpa sapiente earum adipisci quibusdam.' }
