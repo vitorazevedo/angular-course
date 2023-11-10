@@ -1,0 +1,11 @@
+@import "variables";
+
+.app-components {
+  display: flex;
+  flex-direction: column;
+  gap: $size-px-20;
+}
+
+:host {
+  display: block;
+}

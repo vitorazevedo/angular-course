@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { cards } from './cads.interfaces';
+import { Cards } from './cads.interfaces';
 
 @Component({
   selector: 'app-cards',
@@ -12,7 +12,7 @@ import { cards } from './cads.interfaces';
 })
 export class CardsComponent {
 
-  @Input({ required: true }) data: cards[] = [];
+  @Input({ required: true }) data: Cards[] = [];
 
   @Output('onClicked') clicked = new EventEmitter<number>();
 

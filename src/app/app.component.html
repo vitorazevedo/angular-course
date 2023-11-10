@@ -1,16 +1,15 @@
 <header>
-  <h1>Welcome to {{data.title}}!</h1>
+  <h1>{{data.title}}!</h1>
 </header>
 <main>
   <aside>
-    <ul>
-      <li>Intro</li>
-    </ul>
+    <nav>
+      <a routerLink="">Home</a>
+      <a routerLink="components">Components</a>
+    </nav>
   </aside>
-  <section class="app">
-    <!-- ! Add route autlet to have several pages -->
-    <input type="text" name="title" (keyup)="onKeyUp(input.value)" [value]="data.title" #input>
-    <app-cards *ngIf="cards.length" [data]="cards" (onClicked)="onClicked($event)"></app-cards>
+  <section>
+    <router-outlet></router-outlet>
   </section>
 </main>
 <footer>

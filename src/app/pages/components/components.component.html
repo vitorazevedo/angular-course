@@ -1,0 +1,4 @@
+<section class="app-components">
+  <h2>Components Works!</h2>
+  <app-cards *ngIf="cards.length" [data]="cards" (onClicked)="onClicked($event)"></app-cards>
+</section>

@@ -1,4 +1,4 @@
-export interface cards {
+export interface Cards {
   title: string;
   description: string;
 }

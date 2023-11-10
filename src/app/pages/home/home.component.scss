@@ -1,0 +1,17 @@
+@import "variables";
+
+.app-home {
+  display: flex;
+  flex-direction: column;
+  gap: $size-px-20;
+
+  input {
+    width: $size-pe-100;
+    padding: $size-px-20;
+    border: $size-px-1 solid $color-black;
+  }
+}
+
+:host {
+  display: block;
+}
