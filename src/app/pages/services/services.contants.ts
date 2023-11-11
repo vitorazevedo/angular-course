@@ -1,6 +1,42 @@
-export const BASH = `ng generate service data`;
+export const BASH = `ng generate service my-service`;
 
 export const SERVICE_TS = `import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class MyService {
+  private data: any;
+
+  constructor() { }
+
+  setData(data: any): void {
+    this.data = data;
+  }
+
+  getData(): any {
+    return this.data;
+  }
+}`;
+
+export const COMPONENT_TS = `import { Component } from '@angular/core';
+import { MyService } from './my-service.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  constructor(private myService: MyService) {}
+
+  someMethod() {
+    this.myService.setData({ key: 'value' });
+    console.log(this.myService.getData());
+  }
+}`;
+
+export const HTTP_TS = `import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -12,27 +48,6 @@ export class DataService {
 
   fetchData(): Observable<any> {
     return this.http.get('/api/data');
-  }
-}`;
-
-export const COMPONENT_TS = `import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
-  data: any;
-
-  constructor(private dataService: DataService) {}
-
-  ngOnInit() {
-    this.dataService.fetchData().subscribe(
-      result => this.data = result,
-      error => console.error(error)
-    );
   }
 }`;
 
@@ -49,6 +64,10 @@ export const DATA = {
     component: {
       language: 'typescript',
       code: COMPONENT_TS
+    },
+    http: {
+      language: 'typescript',
+      code: HTTP_TS
     }
   }
 };
