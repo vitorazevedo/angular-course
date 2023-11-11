@@ -39,7 +39,8 @@ main {
         color: $color-white-dark;
         text-decoration: none;
 
-        &:hover {
+        &:hover,
+        &.active {
           background-color: rgba($color-info-shade, $opacity-5);
         }
       }
