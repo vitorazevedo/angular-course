@@ -26,3 +26,28 @@ export const SCSS = `div {
 }`;
 
 export const USAGE = `<app-example></app-example>`;
+
+export const DATA = {
+  preview: {
+    bash: {
+      language: 'bash',
+      code: BASH
+    },
+    typescript: {
+      language: 'typescript',
+      code: TYPESCRIPT
+    },
+    html: {
+      language: 'html',
+      code: HTML
+    },
+    scss: {
+      language: 'scss',
+      code: SCSS
+    },
+    usage: {
+      language: 'html',
+      code: USAGE
+    }
+  }
+};

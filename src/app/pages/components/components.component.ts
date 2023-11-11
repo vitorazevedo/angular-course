@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { BASH, HTML, SCSS, TYPESCRIPT, USAGE } from './components.contants';
+import { DATA } from './components.contants';
 
 @Component({
   selector: 'app-components',
@@ -14,28 +14,5 @@ import { BASH, HTML, SCSS, TYPESCRIPT, USAGE } from './components.contants';
   styleUrl: './components.component.scss'
 })
 export class ComponentsComponent {
-  data = {
-    preview: {
-      bash: {
-        language: 'bash',
-        code: BASH
-      },
-      typescript: {
-        language: 'typescript',
-        code: TYPESCRIPT
-      },
-      html: {
-        language: 'html',
-        code: HTML
-      },
-      scss: {
-        language: 'scss',
-        code: SCSS
-      },
-      usage: {
-        language: 'html',
-        code: USAGE
-      }
-    }
-  };
+  data = DATA;
 }

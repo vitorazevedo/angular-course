@@ -11,3 +11,17 @@ export const TYPESCRIPT = `data = {
 onKeyUp(title: string) {
   this.data.title = title;
 }`;
+
+export const DATA = {
+  title: 'Home works!',
+  preview: {
+    html: {
+      language: 'html',
+      code: HTML
+    },
+    typescript: {
+      language: 'typescript',
+      code: TYPESCRIPT
+    }
+  }
+};

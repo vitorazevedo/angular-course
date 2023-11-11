@@ -3,7 +3,7 @@ import { CodePreviewComponent } from 'src/app/components/code-preview/code-previ
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { HTML, TYPESCRIPT } from './data-binding-playground.contants';
+import { DATA } from './data-binding-playground.contants';
 
 @Component({
   selector: 'app-data-binding-playground',
@@ -13,19 +13,7 @@ import { HTML, TYPESCRIPT } from './data-binding-playground.contants';
   styleUrl: './data-binding-playground.component.scss'
 })
 export class DataBindingPlaygroundComponent {
-  data = {
-    title: 'Home works!',
-    preview: {
-      html: {
-        language: 'html',
-        code: HTML
-      },
-      typescript: {
-        language: 'typescript',
-        code: TYPESCRIPT
-      }
-    }
-  };
+  data = DATA;
 
   onKeyUp(title: string) {
     this.data.title = title;
