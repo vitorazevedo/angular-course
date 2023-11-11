@@ -1,0 +1,60 @@
+<article class="app-directives">
+  <h1>Angular Directives: Exploring Types and Custom Implementations</h1>
+  <section>
+    <h2>Introduction</h2>
+    <p>Directives are a pivotal feature in Angular, offering developers the ability to extend and manipulate HTML
+      functionality in dynamic applications. They are broadly categorized into three types: Component Directives,
+      Structural Directives, and Attribute Directives. This article provides an overview of each type, along with
+      detailed examples, including the use of a custom directive.</p>
+  </section>
+  <section>
+    <h2>Component Directives</h2>
+    <p>Component directives are essentially Angular components. They come with their own template and are used to create
+      widgets or reusable UI elements.</p>
+    <h3>Example: Standard Component Directive</h3>
+    <p><strong>user-profile.component.ts</strong></p>
+    <app-code-preview [language]="data.preview.scriptA.language" [code]="data.preview.scriptA.code"></app-code-preview>
+    <p><strong>Usage</strong></p>
+    <app-code-preview [language]="data.preview.htmlA.language" [code]="data.preview.htmlA.code"></app-code-preview>
+    <p>This example creates a simple user profile component that can be reused throughout the application.</p>
+  </section>
+  <section>
+    <h2>Structural Directives</h2>
+    <p>Structural directives control the rendering of HTML in the template. They can add, remove, or manipulate elements
+      in the DOM.</p>
+    <h3>Examples</h3>
+    <p>Using *ngIf</p>
+    <app-code-preview [language]="data.preview.ngif.language" [code]="data.preview.ngif.code"></app-code-preview>
+    <p>Here, the paragraph is only rendered if <code>isLoggedIn</code> is <code>true</code>.</p>
+    <p>Using *ngFor</p>
+    <app-code-preview [language]="data.preview.ngfor.language" [code]="data.preview.ngfor.code"></app-code-preview>
+    <p>In this example, <code>*ngFor</code> is used to render a list item for each element in the <code>items</code>
+      array.</p>
+  </section>
+  <section>
+    <h2>Attribute Directives</h2>
+    <p>Attribute directives change the appearance or behavior of an element, component, or another directive.</p>
+    <h3>Example: Using ngStyle</h3>
+    <app-code-preview [language]="data.preview.htmlC.language" [code]="data.preview.htmlC.code"></app-code-preview>
+    <p>In this example, the style of the <code>div</code> element changes based on the value of <code>isActive</code>.
+    </p>
+  </section>
+  <section>
+    <h2>Custom Directives</h2>
+    <p>Custom directives provide a way to write your own directive with custom behavior or functionality.</p>
+    <h3>Example: Creating a Custom Highlight Directive</h3>
+    <p><strong>highlight.directive.ts</strong></p>
+    <app-code-preview [language]="data.preview.scriptD.language" [code]="data.preview.scriptD.code"></app-code-preview>
+    <p><strong>Usage in Template</strong></p>
+    <app-code-preview [language]="data.preview.htmlD.language" [code]="data.preview.htmlD.code"></app-code-preview>
+    <p>This custom directive dynamically changes the background color of the text element.</p>
+  </section>
+  <section>
+    <h2>Conclusion</h2>
+    <p>Angular's directive types - Component, Structural, and Attribute - each serve unique roles in building dynamic
+      applications. Understanding these directives is crucial for Angular developers. Additionally, creating custom
+      directives, like the Highlight Directive in our example, offers further flexibility and control over the
+      application's behavior and presentation. As Angular continues to evolve, leveraging these directives effectively
+      will remain a key skill in modern web development.</p>
+  </section>
+</article>
