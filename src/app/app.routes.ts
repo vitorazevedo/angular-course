@@ -8,6 +8,7 @@ import {
     DataBindingPlaygroundComponent
 } from './pages/data-binding-playground/data-binding-playground.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { RoutesComponent } from './pages/routes/routes.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 export const routes: Routes = [
@@ -16,4 +17,5 @@ export const routes: Routes = [
   { path: 'angular-components', title: 'Angular - Components', component: ComponentsComponent },
   { path: 'angular-components-playground', title: 'Angular - Components', component: ComponentsPlaygroundComponent },
   { path: 'angular-services', title: 'Angular - Services', component: ServicesComponent },
+  { path: 'angular-routes', title: 'Angular - Routes', component: RoutesComponent },
 ];
